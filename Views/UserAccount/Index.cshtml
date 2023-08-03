@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@model UserInfoVM
+
+<h1>User Information</h1>
+
+<div>
+    <div class="col-form-label">
+        <label>Email : </label> @Model.Email
+    </div>
+    <div class="col-form-label">
+        <label>UserName : </label> @Model.UserName
+    </div>
+    <div class="col-form-label">
+        <label>Information : </label> @Model.InformationText
+    </div>
+
+    <span>Roles</span>
+
+    <ul>
+        @foreach (var rol in Model.Roles)
+            {
+                <li>@rol</li>
+            }
+    </ul>
+</div>

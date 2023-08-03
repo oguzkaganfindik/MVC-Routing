@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "CreateUser";
+}
+
+@model UserFormVM
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success">
+        @ViewBag.Message
+    </div>
+}
+
+<div class="row">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">User Create</h3>
+            </div>
+            <form method="post">
+                <div class="card-body">
+                    <div>
+                        <label>FirstName: </label>
+                        <input type="text" class="form-control" asp-for="FirstName" />
+                    </div>
+                    <div>
+                        <label>LastName: </label>
+                        <input type="text" class="form-control" asp-for="LastName" />
+                    </div>
+                    <div>
+                        <label>Email: </label>
+                        <input type="enail" class="form-control" asp-for="Email" />
+                    </div>
+                    <div>
+                        <label>Password: </label>
+                        <input type="password" class="form-control" asp-for="Password" />
+                    </div>
+                </div>
+                <div class="card-footer" style="height:50px">
+                    <button type="submit" class="btn btn-outline-success float-end">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
